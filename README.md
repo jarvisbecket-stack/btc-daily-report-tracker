@@ -6,6 +6,7 @@ A daily archive of Bitcoin analysis reports with real market data.
 
 | Date | Price | Change | Link | Status |
 |------|-------|--------|------|--------|
+| 2026-02-26 | $67,769 | 🔴 -1.66% | [Report](https://jarvisbecket-stack.github.io/btc-daily-report/) | ✅ |
 | 2026-02-25 | $66,351 | +5.55% | [Report - Feb 25, 2026](https://jarvisbecket-stack.github.io/btc-daily-report/) | ✅ Live |
 
 ---
