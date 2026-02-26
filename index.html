@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Bitcoin Daily Report Archive</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --text-primary: #e8e8f0;
+            --text-secondary: #a0a0b0;
+            --accent-primary: #6366f1;
+            --accent-success: #10b981;
+            --accent-warning: #f59e0b;
+            --border-color: #2a2a3a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: var(--text-secondary); margin-top: 0.5rem; }
+        .live-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .live-link:hover { background: #5558e0; }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th { color: var(--text-secondary); font-weight: 500; }
+        tr:hover { background: var(--bg-secondary); }
+        a { color: var(--accent-primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .status-active { color: var(--accent-success); font-weight: 600; }
+        .price { font-family: monospace; }
+        .change-up { color: var(--accent-success); }
+        .change-down { color: #ef4444; }
+        .refresh-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Bitcoin Daily Report Archive</h1>
+        <p class="subtitle">Historical archive of Bitcoin analysis reports</p>
+        <a href="https://jarvisbecket-stack.github.io/btc-daily-report/" class="live-link">View Latest Report →</a>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <div class="section-title">📈 Report History</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Link</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="report-table">
+                    <tr>
+                        <td>2026-02-26</td>
+                        <td class="price">$67,769</td>
+                        <td class="change-down">-1.66%</td>
+                        <td><a href="https://jarvisbecket-stack.github.io/btc-daily-report/">View</a></td>
+                        <td class="status-active">✅ Live</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-25</td>
+                        <td class="price">$66,351</td>
+                        <td class="change-up">+5.55%</td>
+                        <td><a href="https://jarvisbecket-stack.github.io/btc-daily-report/report_2026-02-25.html">View</a></td>
+                        <td>📄 Archive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🔗 Quick Links</div>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;">📊 <a href="https://jarvisbecket-stack.github.io/btc-daily-report/">Latest Bitcoin Report</a></li>
+                <li style="margin-bottom: 0.5rem;">🔧 <a href="https://jarvisbecket-stack.github.io/openclaw-best-practices/">OpenClaw Best Practices</a></li>
+                <li style="margin-bottom: 0.5rem;">🐙 <a href="https://github.com/jarvisbecket-stack/btc-daily-report">Source Code</a></li>
+            </ul>
+        </div>
+        
+        <div class="refresh-note">
+            🔄 This page auto-updates daily at 7:00 AM CST | 
+            <a href="javascript:location.reload(true)">Force Refresh</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Generated for Ricardo Davila | America/Chicago Time</p>
+        <p style="margin-top: 0.5rem;">Data: Binance API, X API</p>
+    </footer>
+    
+    <script>
+        // Auto-refresh every 5 minutes to check for updates
+        setInterval(function() {
+            window.location.reload(true);
+        }, 300000);
+    </script>
+</body>
+</html>
